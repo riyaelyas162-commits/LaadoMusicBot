@@ -2,7 +2,7 @@ import asyncio
 from pyrogram import Client, filters, idle
 from pyrogram.types import Message
 
-API_ID = 34871535   # number (quotes nahi)
+API_ID = 34871535
 API_HASH = "4e38cdb0eb2d2fb20aec1ed339a28c35"
 BOT_TOKEN = "8318890496:AAH91pPTBrt10Hxd1g-MXktRNxLVRxCT_nE"
 
@@ -10,7 +10,7 @@ app = Client("music-bot", api_id=API_ID, api_hash=API_HASH, bot_token=BOT_TOKEN)
 
 @app.on_message(filters.command("start"))
 async def start(client, message: Message):
-    await message.reply_text("🎵 Music Bot Started Successfully!")j
+    await message.reply_text("🎵 Music Bot Started Successfully!")
 
 @app.on_message(filters.command("ping"))
 async def ping(client, message: Message):

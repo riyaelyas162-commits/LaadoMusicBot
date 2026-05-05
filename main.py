@@ -13,12 +13,12 @@ async def start(client, message: Message):
     await message.reply_text("🎵 Music Bot Started Successfully!")
 
 @app.on_message(filters.command("ping"))
-async def ping(client, message: Message):
-    await message.reply_text("🏓 Pong!")
+async def ping(client, message: Pong):
+    await message.reply_text("Pong!")
 
 async def main():
     await app.start()
-    print("Bot Started ✅")
+    print("Bot StaStarted")
     await idle()
 
 if name == "main":

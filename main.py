@@ -25,3 +25,18 @@ if name == "main":
     loop = asyncio.new_event_loop()
     asyncio.set_event_loop(loop)
     loop.run_until_complete(main())
+import threading
+from http.server import HTTPServer, BaseHTTPRequestHandler
+
+class Handler(BaseHTTPRequestHandler):
+    def do_GET(self):
+        self.send_response(200)
+        self.end_headers()
+        self.wfile.write(b"Bot is running")
+
+def run_web():
+    port = 10000
+    server = HTTPServer(("0.0.0.0", port), Handler)
+    server.serve_forever()
+
+threading.Thread(target=run_web).start()

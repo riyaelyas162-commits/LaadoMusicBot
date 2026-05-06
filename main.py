@@ -11,7 +11,7 @@ SESSION = os.getenv("SESSION")
 bot = Client("bot", api_id=API_ID, api_hash=API_HASH, bot_token=BOT_TOKEN)
 assistant = Client("assistant", api_id=API_ID, api_hash=API_HASH, session_string=SESSION)
 
-call = PyTgCalls(assistant)
+call = GroupCallFactory(assistant).get_group_call()
 
 @bot.on_message(filters.command("start"))
 async def start(_, m):

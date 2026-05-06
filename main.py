@@ -1,6 +1,6 @@
 import os
 from pyrogram import Client, filters
-from pytgcalls import PyTgCalls
+from pytgcalls import GroupCallFactory
 from pytgcalls.types.input_stream import AudioPiped
 
 API_ID = int(os.getenv("34871535"))

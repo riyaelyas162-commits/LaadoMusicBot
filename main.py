@@ -5,13 +5,8 @@ from pytgcalls.types.input_stream import AudioPiped
 
 API_ID = int(os.getenv("34871535"))
 API_HASH = os.getenv("4e38cdb0eb2d2fb20aec1ed339a28c35")
-BOT_TOKEN = os.getenv("8318890496:AAGkZKvOOknGLoZrDlxpxzFHyPxMjMqXrZw")
-SESSION = os.getenv("MIIBCgKCAQEA6LszBcC1LGzyr992NzE0>
-5nKaMBwK/BIb9xUfg0Q29/2mgIR6Zr9krM7HjuIcCzFvDtr>
-62cECs5HKhT5DZ98K33vmWiLowc621dQuwKWSQKjWf50XYF>
-+aEyZ+uVgLLQbRA1dEjSDZ2iGRy12Mk5gpYc397aYp438fs>
-t6N/byY9Nw9p21Og3AoXSL2q/2IJ1WRUhebgAdGVMlV1fku>
-5+bfo3Nhmcyvk5ftB0WkJ9z6bNZ7yxrP8wIDAQAB")
+BOT_TOKEN = os.getenv("8318890496:AAGkZKvOOknGLoZrDlxpxzFHyPxMjMqXrZw") 
+SESSION = os.getenv("SESSION")
 
 bot = Client("bot", api_id=API_ID, api_hash=API_HASH, bot_token=BOT_TOKEN)
 assistant = Client("assistant", api_id=API_ID, api_hash=API_HASH, session_string=SESSION)

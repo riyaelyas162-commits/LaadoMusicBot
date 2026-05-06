@@ -5,7 +5,7 @@ from pytgcalls.types.input_stream import AudioPiped
 
 API_ID = int(os.getenv("34871535"))
 API_HASH = os.getenv("4e38cdb0eb2d2fb20aec1ed339a28c35")
-BOT_TOKEN = os.getenv("8318890496:AAGkZKvOOknGLoZrDlxpxzFHyPxMjMqXrZw") 
+BOT_TOKEN = os.getenv("8318890496:AAGkZKvOOknGLoZrDlxpxzFHyPxMjMqXrZw")
 SESSION = os.getenv("SESSION")
 
 bot = Client("bot", api_id=API_ID, api_hash=API_HASH, bot_token=BOT_TOKEN)
@@ -15,7 +15,7 @@ call = PyTgCalls(assistant)
 
 @bot.on_message(filters.command("start"))
 async def start(_, m):
-    await m.reply("🎵 VC Music Bot Ready!")
+    await m.reply("✅ Bot Working!")
 
 @bot.on_message(filters.command("play") & filters.reply)
 async def play(_, m):
@@ -29,7 +29,7 @@ async def play(_, m):
         m.chat.id,
         AudioPiped(file)
     )
-    await m.reply("▶️ Playing in VC...")
+    await m.reply("▶️ Playing...")
 
 @bot.on_message(filters.command("stop"))
 async def stop(_, m):
